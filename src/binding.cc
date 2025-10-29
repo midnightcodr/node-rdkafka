@@ -71,4 +71,5 @@ void Init(v8::Local<v8::Object> exports, v8::Local<v8::Value> m_, void* v_) {
       Nan::New(RdKafka::version_str().c_str()).ToLocalChecked());
 }
 
-NODE_MODULE_CONTEXT_AWARE(kafka, Init)
+// NODE_MODULE_CONTEXT_AWARE(kafka, Init)
+NAN_MODULE_WORKER_ENABLED(kafka, Init)
